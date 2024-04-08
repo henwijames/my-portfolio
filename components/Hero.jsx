@@ -35,6 +35,11 @@ const Hero = () => {
         };
     }, []);
 
+    const handleDownCV = () => {
+        const resumePdfUrl = "/resume/hjr.pdf";
+        window.open(resumePdfUrl, "_blank");
+    };
+
     return (
         <div>
             <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 mb-24 flex items-center xl:items-start">
@@ -62,7 +67,11 @@ const Hero = () => {
                                         Contact Me <Send size={18} />{" "}
                                     </Button>
                                 </Link>
-                                <Button variant="secondary" className="gap-x-2">
+                                <Button
+                                    variant="secondary"
+                                    className="gap-x-2"
+                                    onClick={handleDownCV}
+                                >
                                     Download CV <Download size={18} />
                                 </Button>
                             </div>

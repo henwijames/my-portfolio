@@ -18,11 +18,14 @@ const Contact = () => {
                             Let's Work Together.
                         </h1>
                         <p className="subtitle max-w-[400px]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Praesent ullamcorper id quam nec congue.
-                            Aliquam quis sagittis orci, sed dapibus orci. Proin
-                            posuere fringilla metus, condimentum varius metus
-                            fringilla nec.
+                            Feel free to reach out to me for any inquiries,
+                            collaborations, or just to say hello! Whether you
+                            have a project in mind, want to discuss a potential
+                            partnership, or simply want to connect, I'm always
+                            eager to hear from you. Drop me a message using the
+                            form below or directly through my email, and I'll
+                            get back to you as soon as possible. Looking forward
+                            to hearing from you!
                         </p>
                     </div>
                     {/* illustration */}
