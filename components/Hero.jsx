@@ -94,7 +94,7 @@ const Hero = () => {
                             <Badge
                                 containerStyles="absolute top-[100%] -left-[10rem] hover:scale-110 transition-all cursor-pointer"
                                 icon={<RiTodoFill />}
-                                endCountNum={10}
+                                endCountNum={5}
                                 badgeText="Projects Completed"
                             />
                             <Me
