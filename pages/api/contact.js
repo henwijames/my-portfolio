@@ -9,12 +9,6 @@ export default async function ContactAPI(req, res) {
     const user = process.env.USER_EMAIL;
     const password = process.env.USER_PASSWORD;
 
-    const data = {
-        name,
-        email,
-        message,
-    };
-
     const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
         port: 465,
