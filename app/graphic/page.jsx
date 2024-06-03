@@ -1,28 +1,29 @@
 "use client";
 import React, { useState } from "react";
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
-import ProjectCard from "@/components/ProjectCard";
+import GraphicsCard from "@/components/GraphicsCard";
 
 const projectData = [
   {
-    image: "/works/alumni.png",
+    image: "/graphics/bag.png",
     category: "PHP",
-    name: "Lemery Colleges alumni system",
-    description: "Information and Credential Request Management System",
+    name: "Bag Mockup",
+    description:
+      "Information and Credential Request Management System for Lemery Colleges Alumni",
     link: "/",
     github: "/",
   },
   {
-    image: "/works/ellas.png",
+    image: "/graphics/shirt.png",
     category: "PHP",
-    name: "Ella's Pizza Point of Sale System",
+    name: "HENWI DOES TECH T-Shirt Website",
     description:
       "Point of Sale System for Ella's Pizza to manage their sales and inventory",
     link: "/",
     github: "/",
   },
   {
-    image: "/works/donpatata.png",
+    image: "/graphics/hoodie.png",
     category: "PHP",
     name: "DON Patata Ordering System",
     description:
@@ -31,20 +32,11 @@ const projectData = [
     github: "/",
   },
   {
-    image: "/works/utopia.png",
+    image: "/graphics/mug.png",
     category: "Javascript",
     name: "Utopia Island Resort Booking System",
     description:
       "Booking System for Utopia Island Resort to manage their bookings and reservations",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/works/lemsehi.png",
-    category: "HTML and CSS",
-    name: "Lemery Senior High School Website",
-    description:
-      "Website for Lemery Senior High School to showcase their school and programs",
     link: "/",
     github: "/",
   },
@@ -56,7 +48,7 @@ const uniqueCategories = [
   ...new Set(projectData.map((item) => item.category)),
 ];
 
-const Projects = () => {
+const Graphics = () => {
   const [categories, setCategories] = useState(uniqueCategories);
   const [category, setCategory] = useState("all projects");
 
@@ -69,35 +61,17 @@ const Projects = () => {
 
   return (
     <section className="min-h-screen pt-12">
-      <div className="container mx-auto">
-        <h2 className=" section-title mb-8 xl:mb-16 text-center mx-auto">
-          My Projects
-        </h2>
+      <div className="container mx-auto ">
+        <h1 className=" h1 mb-8 xl:mb-16">As a Graphic Designer,</h1>
+
         {/* tabs */}
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
-          <TabsList
-            className="w-full grid h-full md:grid-cols-4 lg:max-w-[640px]
-                    mb-12 mx-auto md:border"
-          >
-            {categories.map((category, index) => {
-              return (
-                <TabsTrigger
-                  onClick={() => setCategory(category)}
-                  value={category}
-                  key={index}
-                  className="capitalize w-[162px] md:w-auto"
-                >
-                  {category}
-                </TabsTrigger>
-              );
-            })}
-          </TabsList>
           {/* Tabscontent */}
           <div className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4">
             {filteredProjects.map((project, index) => {
               return (
                 <TabsContent value={category} key={index}>
-                  <ProjectCard project={project} />
+                  <GraphicsCard project={project} />
                 </TabsContent>
               );
             })}
@@ -108,4 +82,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Graphics;
