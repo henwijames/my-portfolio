@@ -8,8 +8,7 @@ const projectData = [
     image: "/graphics/bag.png",
     category: "PHP",
     name: "Bag Mockup",
-    description:
-      "Information and Credential Request Management System for Lemery Colleges Alumni",
+    description: "<henwi /> does tech",
     link: "/",
     github: "/",
   },
@@ -17,8 +16,7 @@ const projectData = [
     image: "/graphics/shirt.png",
     category: "PHP",
     name: "HENWI DOES TECH T-Shirt Website",
-    description:
-      "Point of Sale System for Ella's Pizza to manage their sales and inventory",
+    description: "<henwi /> does tech",
     link: "/",
     github: "/",
   },
@@ -26,8 +24,7 @@ const projectData = [
     image: "/graphics/hoodie.png",
     category: "PHP",
     name: "DON Patata Ordering System",
-    description:
-      "Ordering System for DON Patata to manage their orders and inventory",
+    description: "<henwi /> does tech",
     link: "/",
     github: "/",
   },
@@ -35,8 +32,7 @@ const projectData = [
     image: "/graphics/mug.png",
     category: "Javascript",
     name: "Utopia Island Resort Booking System",
-    description:
-      "Booking System for Utopia Island Resort to manage their bookings and reservations",
+    description: "<henwi /> does tech",
     link: "/",
     github: "/",
   },
