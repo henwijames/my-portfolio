@@ -54,7 +54,7 @@ const Hero = () => {
                 Hi, I'm <span className="text-slate-500">Henry!</span>{" "}
               </h1>
               <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-                3rd year IT student major in Web Development and Graphic Design
+                4th year IT student major in Web Development and Graphic Design
                 based in the Philippines.
               </p>
               {/* Buttons */}

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Card, CardHeader } from "./ui/card";
-import { Github, Link2Icon } from "lucide-react";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -18,7 +17,7 @@ const ProjectCard = ({ project }) => {
             priority
           />
           {/* buttons */}
-          <div className="flex gap-x-4">
+          {/* <div className="flex gap-x-4">
             <Link
               href={project.link}
               className="bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center 
@@ -33,7 +32,7 @@ const ProjectCard = ({ project }) => {
             >
               <Github />
             </Link>
-          </div>
+          </div> */}
         </div>
       </CardHeader>
       <div className="h-full px-8 py-6">
