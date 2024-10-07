@@ -5,6 +5,22 @@ import GraphicsCard from "@/components/GraphicsCard";
 
 const projectData = [
   {
+    image: "/graphics/orgshirt.png",
+    category: "Mockups",
+    name: "LC SELECT Org Shirt Mockup",
+    description: "<henwi /> does tech",
+    link: "/",
+    github: "/",
+  },
+  {
+    image: "/graphics/lanyard.png",
+    category: "Mockups",
+    name: "LC SELECT Lanyard Mockup",
+    description: "<henwi /> does tech",
+    link: "/",
+    github: "/",
+  },
+  {
     image: "/graphics/techno.png",
     category: "Posters",
     name: "Technolympics 2024",
@@ -54,7 +70,7 @@ const projectData = [
   },
   {
     image: "/graphics/bag.png",
-    category: "Activities",
+    category: "Mockups",
     name: "Bag Mockup",
     description: "<henwi /> does tech",
     link: "/",
@@ -62,7 +78,7 @@ const projectData = [
   },
   {
     image: "/graphics/shirt.png",
-    category: "Activities",
+    category: "Mockups",
     name: "HENWI DOES TECH T-Shirt Website",
     description: "<henwi /> does tech",
     link: "/",
@@ -70,7 +86,7 @@ const projectData = [
   },
   {
     image: "/graphics/hoodie.png",
-    category: "Activities",
+    category: "Mockups",
     name: "DON Patata Ordering System",
     description: "<henwi /> does tech",
     link: "/",
@@ -78,7 +94,7 @@ const projectData = [
   },
   {
     image: "/graphics/mug.png",
-    category: "Activities",
+    category: "Mockups",
     name: "Utopia Island Resort Booking System",
     description: "<henwi /> does tech",
     link: "/",
@@ -134,7 +150,7 @@ const projectData = [
   },
   {
     image: "/graphics/hemtag.png",
-    category: "Activities",
+    category: "Mockups",
     name: "MDCN Hemtag",
     description: "<henwi /> does tech",
     link: "/",
@@ -142,7 +158,7 @@ const projectData = [
   },
   {
     image: "/graphics/white.png",
-    category: "Activities",
+    category: "Mockups",
     name: "MDCN Clothing White",
     description: "<henwi /> does tech",
     link: "/",
@@ -150,7 +166,7 @@ const projectData = [
   },
   {
     image: "/graphics/black.png",
-    category: "Activities",
+    category: "Mockups",
     name: "MDCN Clothing Black",
     description: "<henwi /> does tech",
     link: "/",
