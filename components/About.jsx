@@ -201,7 +201,7 @@ const About = () => {
                             className="flex items-center gap-x-4 mx-auto xl:mx-0"
                           >
                             <div className="text-primary">{item.icon}</div>
-                            <div>{item.text}</div>
+                            <div class="text-sm sm:text-xl">{item.text}</div>
                           </div>
                         );
                       })}

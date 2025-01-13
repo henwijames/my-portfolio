@@ -5,11 +5,20 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projectData = [
   {
+    image: "/works/capstone.png",
+    category: "PHP",
+    name: "Capstone Project",
+    description:
+      "Apartment Rental System using SMS and Email Notification with GCash and Maya QR-Code",
+    link: "/",
+    github: "/",
+  },
+  {
     image: "/works/alumni.png",
     category: "PHP",
     name: "Lemery Colleges alumni system",
     description: "Information and Credential Request Management System",
-    link: "/",
+    link: "https://alumni.lemerycolleges.edu.ph",
     github: "/",
   },
   {
