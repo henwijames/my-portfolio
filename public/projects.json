@@ -1,0 +1,50 @@
+[
+  {
+    "image": "/works/capstone.png",
+    "category": "PHP",
+    "name": "Capstone Project",
+    "description": "Apartment Rental System using SMS and Email Notification with GCash and Maya QR-Code",
+    "link": "/",
+    "github": "https://github.com/henwijames/poblacion_capstone"
+  },
+  {
+    "image": "/works/alumni.png",
+    "category": "PHP",
+    "name": "Lemery Colleges alumni system",
+    "description": "Information and Credential Request Management System for Lemery Colleges Alumni",
+    "link": "/",
+    "github": "/"
+  },
+  {
+    "image": "/works/ellas.png",
+    "category": "PHP",
+    "name": "Ella's Pizza Point of Sale System",
+    "description": "Point of Sale System for Ella's Pizza to manage their sales and inventory",
+    "link": "/",
+    "github": "/"
+  },
+  {
+    "image": "/works/donpatata.png",
+    "category": "PHP",
+    "name": "DON Patata Ordering System",
+    "description": "Ordering System for DON Patata to manage their orders and inventory",
+    "link": "/",
+    "github": "/"
+  },
+  {
+    "image": "/works/utopia.png",
+    "category": "Javascript",
+    "name": "Utopia Island Resort Booking System",
+    "description": "Booking System for Utopia Island Resort to manage their bookings and reservations",
+    "link": "/",
+    "github": "/"
+  },
+  {
+    "image": "/works/lemsehi.png",
+    "category": "HTML and CSS",
+    "name": "Lemery Senior High School Website",
+    "description": "Website for Lemery Senior High School to showcase their school and programs",
+    "link": "/",
+    "github": "/"
+  }
+]

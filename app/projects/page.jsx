@@ -11,7 +11,7 @@ const projectData = [
     description:
       "Apartment Rental System using SMS and Email Notification with GCash and Maya QR-Code",
     link: "/",
-    github: "/",
+    github: "https://github.com/henwijames/poblacion_capstone",
   },
   {
     image: "/works/alumni.png",
