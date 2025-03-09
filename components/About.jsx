@@ -1,6 +1,12 @@
 import Me from "./Me";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 import {
   User2,
@@ -93,6 +99,18 @@ const skillData = [
         image: "/skills/php.svg",
       },
       {
+        name: "MYSQL",
+        image: "/skills/mysql.svg",
+      },
+      {
+        name: "ReactJS",
+        image: "/skills/react.png",
+      },
+      {
+        name: "Laravel",
+        image: "/skills/laravel.png",
+      },
+      {
         name: "SASS",
         image: "/skills/sass.svg",
       },
@@ -102,19 +120,11 @@ const skillData = [
       },
       {
         name: "BOOTSTRAP",
-        image: "/skills/bootsrap.svg",
+        image: "/skills/bootstrap.png",
       },
       {
-        name: "NODEJS",
-        image: "/skills/nodejs.svg",
-      },
-      {
-        name: "MYSQL",
-        image: "/skills/mysql.svg",
-      },
-      {
-        name: "PYTHON",
-        image: "/skills/python.svg",
+        name: "Wordpress",
+        image: "/skills/wordpress.png",
       },
     ],
   },
@@ -173,7 +183,7 @@ const About = () => {
                   Qualifications
                 </TabsTrigger>
                 <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
-                  Skills
+                  Tech Stack
                 </TabsTrigger>
               </TabsList>
               {/* Tabs Content */}
@@ -308,16 +318,25 @@ const About = () => {
                             return (
                               <div key={index}>
                                 <div className="flex justify-center items-center">
-                                  <div className="xl:w-10 xl:h-10 w-8 h-8 ">
-                                    <Image
-                                      src={image}
-                                      alt="skills"
-                                      width={50}
-                                      height={50}
-                                      priority
-                                      className="hover:scale-150 transition-all duration-300 cursor-pointer"
-                                    />
-                                  </div>
+                                  <TooltipProvider>
+                                    <Tooltip>
+                                      <TooltipTrigger asChild>
+                                        <div className="xl:w-10 xl:h-10 w-8 h-8 ">
+                                          <Image
+                                            src={image}
+                                            alt="skills"
+                                            width={50}
+                                            height={50}
+                                            priority
+                                            className="hover:scale-110 transition-all duration-300 cursor-pointer"
+                                          />
+                                        </div>
+                                      </TooltipTrigger>
+                                      <TooltipContent>
+                                        <p>{item.name}</p>
+                                      </TooltipContent>
+                                    </Tooltip>
+                                  </TooltipProvider>
                                 </div>
                               </div>
                             );

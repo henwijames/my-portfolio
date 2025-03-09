@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Typed from "typed.js";
 
 import Link from "next/link";
@@ -18,7 +18,7 @@ import Badge from "./Badge";
 import Socials from "./Socials";
 import Me from "./Me";
 
-const Hero = () => {
+const Hero = ({ aboutRef }) => {
   useEffect(() => {
     const options = {
       strings: ["Frontend Developer", "Web Developer", "UI/UX Designer"],
@@ -38,6 +38,10 @@ const Hero = () => {
   const handleDownCV = () => {
     const resumePdfUrl = "/resume/hjr.pdf";
     window.open(resumePdfUrl, "_blank");
+  };
+
+  const scrollDown = () => {
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -102,7 +106,10 @@ const Hero = () => {
             </div>
           </div>
           {/* Icon */}
-          <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
+          <div
+            className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce cursor-pointer"
+            onClick={scrollDown}
+          >
             <RiArrowDownSLine className="text-3xl text-primary" />
           </div>
         </div>
