@@ -5,6 +5,16 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projectData = [
   {
+    image: "/works/jingstyle.png",
+    category: "Wordpress",
+    name: "JingStyle Interiors",
+    description:
+      "Website for Chinese Client to showcase their business and services",
+    link: "https://wordpress-1006216-5344415.cloudwaysapps.com/",
+    github: "/",
+    tech: ["Wordpress", "Elementor"],
+  },
+  {
     image: "/works/capstone.png",
     category: "PHP",
     name: "Capstone Project",
@@ -12,6 +22,7 @@ const projectData = [
       "Apartment Rental System using SMS and Email Notification with GCash and Maya QR-Code",
     link: "/",
     github: "https://github.com/henwijames/poblacion_capstone",
+    tech: ["PHP", "JQuery", "MySQL", "Tailwind CSS", "DaisyUI"],
   },
   {
     image: "/works/alumni.png",
@@ -19,7 +30,8 @@ const projectData = [
     name: "Lemery Colleges alumni system",
     description: "Information and Credential Request Management System",
     link: "https://alumni.lemerycolleges.edu.ph",
-    github: "/",
+    github: "https://github.com/itsmekentoy/alumni",
+    tech: ["PHP", "JQuery", "MySQL", "Bootstrap"],
   },
   {
     image: "/works/ellas.png",
@@ -29,6 +41,7 @@ const projectData = [
       "Point of Sale System for Ella's Pizza to manage their sales and inventory",
     link: "/",
     github: "/",
+    tech: ["PHP", "MySQL", "Bootstrap"],
   },
   {
     image: "/works/donpatata.png",
@@ -38,24 +51,27 @@ const projectData = [
       "Ordering System for DON Patata to manage their orders and inventory",
     link: "/",
     github: "/",
+    tech: ["PHP", "MySQL", "Bootstrap"],
   },
   {
     image: "/works/utopia.png",
-    category: "Javascript",
+    category: "HTML, CSS, AND JS",
     name: "Utopia Island Resort Booking System",
     description:
       "Booking System for Utopia Island Resort to manage their bookings and reservations",
     link: "/",
     github: "/",
+    tech: ["HTML", "CSS", "JS"],
   },
   {
     image: "/works/lemsehi.png",
-    category: "HTML and CSS",
+    category: "HTML, CSS, AND JS",
     name: "Lemery Senior High School Website",
     description:
       "Website for Lemery Senior High School to showcase their school and programs",
     link: "/",
     github: "/",
+    tech: ["HTML", "CSS", "JS"],
   },
 ];
 
@@ -85,7 +101,7 @@ const Projects = () => {
         {/* tabs */}
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
           <TabsList
-            className="w-full grid h-full md:grid-cols-4 lg:max-w-[640px]
+            className="w-full grid gap-2 h-full md:grid-cols-4 lg:max-w-[740px]
                     mb-12 mx-auto md:border"
           >
             {categories.map((category, index) => {
@@ -94,7 +110,7 @@ const Projects = () => {
                   onClick={() => setCategory(category)}
                   value={category}
                   key={index}
-                  className="capitalize w-[162px] md:w-auto"
+                  className="uppercase w-[162px] md:w-auto text-sm"
                 >
                   {category}
                 </TabsTrigger>
