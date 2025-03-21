@@ -88,14 +88,14 @@ const Hero = ({ aboutRef }) => {
               <Badge
                 containerStyles="absolute top-[5%] -left-[30rem] hover:scale-110 transition-all cursor-pointer"
                 icon={<RiBriefcase4Fill />}
-                endCountNum={3}
+                endCountNum={4}
                 badgeText="Years of Experience"
               />
               {/* Badge 2 */}
               <Badge
                 containerStyles="absolute top-[100%] -left-[10rem] hover:scale-110 transition-all cursor-pointer"
                 icon={<RiTodoFill />}
-                endCountNum={6}
+                endCountNum={7}
                 badgeText="Projects Completed"
               />
               <Me
