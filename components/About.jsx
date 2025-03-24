@@ -1,5 +1,8 @@
+import React, { useRef } from "react";
 import Me from "./Me";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Tooltip,
@@ -16,6 +19,7 @@ import {
   Calendar,
   Briefcase,
 } from "lucide-react";
+import { useEffect } from "react";
 
 const infoData = [
   {
@@ -47,11 +51,16 @@ const qualificationData = [
       {
         college: "Lemery Colleges",
         qualifications: "Bachelor of Science in Information Technology",
-        years: "2019 - Present",
+        years: "2021 - Present",
       },
       {
         college: "Lemery Senior High School",
         qualifications: "Accountancy, Business and Management Strand",
+        years: "2019 - 2021",
+      },
+      {
+        college: "Taal National High School",
+        qualifications: "Junior High School",
         years: "2015 - 2019",
       },
       {
@@ -65,14 +74,9 @@ const qualificationData = [
     title: "experience",
     data: [
       {
-        company: "Dainice Event Management",
-        role: "Event Staff",
-        years: "November 2022",
-      },
-      {
-        company: "Lemery Colleges",
-        role: "Front-End Developer and UI/UX Designer",
-        years: "October 2023 - March 2024",
+        company: "Bear Digital Non-Voices Outsourcing Services",
+        role: "Web Developer Intern",
+        years: "February 2025 - May 2025",
       },
     ],
   },
@@ -147,13 +151,37 @@ const skillData = [
   },
 ];
 
+gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
   const getData = (arr, title) => {
     return arr.find((item) => item.title === title);
   };
 
+  const sectionRef = useRef(null);
+  useEffect(() => {
+    gsap.set(sectionRef.current, { opacity: 0, y: 50 });
+
+    const animation = gsap.to(sectionRef.current, {
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    return () => {
+      animation.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
-    <section className="xl:h-[860px] pb-12 xl:py-24 mb-24">
+    <section ref={sectionRef} className="xl:h-[860px] pb-12 xl:py-24 mb-24">
       <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
           About Me

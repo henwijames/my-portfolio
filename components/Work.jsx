@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // import swiper react components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,11 +16,13 @@ import { Pagination } from "swiper/modules";
 
 // components
 import ProjectCard from "@/components/ProjectCard";
-import { use, useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
   const [projectData, setProjectData] = useState([]);
-
+  const workRef = useRef(null);
   useEffect(() => {
     const fetchProjects = async () => {
       const response = await fetch("/projects.json");
@@ -26,10 +30,24 @@ const Work = () => {
       setProjectData(data);
     };
 
+    gsap.set(workRef.current, { opacity: 0, y: 50 });
+    gsap.to(workRef.current, {
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: workRef.current,
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none none",
+      },
+    });
+
     fetchProjects();
   }, []);
   return (
-    <section className="relative mb-12 xl:mb-48">
+    <section ref={workRef} className="relative mb-12 xl:mb-48">
       <div className="container mx-auto">
         {/* text */}
         <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
@@ -44,7 +62,7 @@ const Work = () => {
         {/* Slider */}
         <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
           <Swiper
-            className="h-[500px]"
+            className="h-[520px]"
             slidesPerView={1}
             breakpoints={{
               640: {

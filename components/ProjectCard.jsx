@@ -6,7 +6,7 @@ import { Badge } from "./ui/badge";
 
 const ProjectCard = ({ project }) => {
   return (
-    <Card className="relative rounded-2xl group overflow-hidden max-h-[800px] h-[450px] ">
+    <Card className="relative rounded-2xl group overflow-hidden max-h-[800px] h-[470px] flex flex-col">
       <CardHeader className="p-0">
         {/* Image */}
         <div className="relative w-full xl:h-[300px] h-[250px] flex items-center justify-center bg-tertiary dark:bg-secondary/40 overflow-hidden">
@@ -44,11 +44,13 @@ const ProjectCard = ({ project }) => {
           </div>
         </div>
       </CardHeader>
-      <div className="h-full px-8 py-6">
-        <h4 className="h4 mb-1 capitalize">{project.name}</h4>
-        <p className="text-muted-foreground text-sm">{project.description}</p>
+      <div className="px-8 py-6 flex flex-col justify-between h-full">
+        <div>
+          <h4 className="h4 mb-1 capitalize">{project.name}</h4>
+          <p className="text-muted-foreground text-sm">{project.description}</p>
+        </div>
         {project.tech?.length > 0 && (
-          <div className="flex gap-2 mt-[16px] flex-wrap">
+          <div className="flex gap-2 mt-4 flex-wrap w-full">
             {project.tech.map((item, index) => {
               return (
                 <Badge

@@ -1,5 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Typed from "typed.js";
 
 import Link from "next/link";
@@ -18,10 +20,14 @@ import Badge from "./Badge";
 import Socials from "./Socials";
 import Me from "./Me";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Hero = ({ aboutRef }) => {
+  const heroRef = useRef(null);
+  const textRef = useRef(null);
   useEffect(() => {
     const options = {
-      strings: ["Frontend Developer", "Web Developer", "UI/UX Designer"],
+      strings: ["Frontend Developer", "Wordpress Developer"],
       typeSpeed: 100,
       backSpeed: 100,
       loop: true,
@@ -30,13 +36,31 @@ const Hero = ({ aboutRef }) => {
 
     const typed = new Typed(".hero-text", options);
 
+    // First, set initial states before animating
+    gsap.set(heroRef.current, { opacity: 0, y: 50 });
+    gsap.set(textRef.current, { opacity: 0 });
+
+    gsap.to(heroRef.current, {
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      ease: "power3.out",
+    });
+
+    gsap.to(textRef.current, {
+      opacity: 1,
+      duration: 1,
+      ease: "power2.out",
+      delay: 0.3,
+    });
+
     return () => {
       typed.destroy();
     };
   }, []);
 
   const handleDownCV = () => {
-    const resumePdfUrl = "/resume/hjr.pdf";
+    const resumePdfUrl = "/resume/Resume.pdf";
     window.open(resumePdfUrl, "_blank");
   };
 
@@ -46,20 +70,26 @@ const Hero = ({ aboutRef }) => {
 
   return (
     <div>
-      <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 mb-24 flex items-center xl:items-start">
+      <section
+        ref={heroRef}
+        className="py-12 xl:py-24 h-[84vh] xl:pt-28 mb-24 flex items-center xl:items-start"
+      >
         <div className="container mx-auto">
           <div className="flex justify-between gap-x-8">
             {/* text */}
             <div className="flex max-w-[1000px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
-              <div className="text-sm uppercase font-semibold text-primary tracking-[4px] hero flex flex-row xl:justify-start sm:flex justify-center items-center">
+              <div
+                ref={textRef}
+                className="text-sm uppercase font-semibold text-primary tracking-[4px] hero flex flex-row xl:justify-start sm:flex justify-center items-center"
+              >
                 <div className="hero-text">Front-end Developer</div>
               </div>
               <h1 className="h1 mb-4">
                 Hi, I'm <span className="text-slate-500">Henry!</span>{" "}
               </h1>
               <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-                4th year IT student major in Web Development and Graphic Design
-                based in the Philippines.
+                4th year IT student major in Web Development based in the
+                Philippines.
               </p>
               {/* Buttons */}
               <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
