@@ -55,7 +55,7 @@ const ProjectCard = ({ project }) => {
               return (
                 <Badge
                   key={index}
-                  className="bg-secondary hover:bg-secondary text-secondary dark:bg-primary/75 cursor-default dark:text-secondary text-black flex justify-center items-center text-xs font-medium"
+                  className="bg-primary  text-white dark:bg-primary/75 cursor-default dark:text-secondary flex justify-center items-center text-xs font-medium"
                 >
                   {item}
                 </Badge>
