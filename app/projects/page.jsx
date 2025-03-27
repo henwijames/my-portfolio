@@ -34,9 +34,7 @@ const Projects = () => {
       } catch (error) {
         console.error("Error fetching project data:", error);
       } finally {
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 2000);
+        setIsLoading(false);
       }
     };
 

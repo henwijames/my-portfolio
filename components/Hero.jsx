@@ -25,6 +25,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = ({ aboutRef }) => {
   const heroRef = useRef(null);
   const textRef = useRef(null);
+
   useEffect(() => {
     const options = {
       strings: ["Frontend Developer", "Wordpress Developer"],
@@ -36,7 +37,6 @@ const Hero = ({ aboutRef }) => {
 
     const typed = new Typed(".hero-text", options);
 
-    // First, set initial states before animating
     gsap.set(heroRef.current, { opacity: 0, y: 50 });
     gsap.set(textRef.current, { opacity: 0 });
 

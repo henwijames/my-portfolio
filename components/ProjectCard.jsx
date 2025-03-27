@@ -6,10 +6,10 @@ import { Badge } from "./ui/badge";
 
 const ProjectCard = ({ project }) => {
   return (
-    <Card className="relative rounded-2xl group overflow-hidden max-h-[800px] h-[470px] flex flex-col">
+    <Card className="relative rounded-2xl group overflow-hidden max-h-[800px] h-[330px] flex flex-col">
       <CardHeader className="p-0">
         {/* Image */}
-        <div className="relative w-full xl:h-[300px] h-[250px] flex items-center justify-center bg-tertiary dark:bg-secondary/40 overflow-hidden">
+        <div className="relative w-full h-[170px] flex items-center justify-center bg-black/5 dark:bg-secondary/40 overflow-hidden">
           <Image
             className="absolute bottom-0 shadow-2x xl:w-[230px] w-[180px] cursor-pointer group-hover:scale-105 transition-all duration-200"
             src={project.image}

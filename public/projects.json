@@ -1,5 +1,23 @@
 [
   {
+    "image": "/works/jobable.png",
+    "category": "PHP",
+    "name": "Jobable",
+    "description": "Simple Laravel CRUD with User Authentication",
+    "link": "/",
+    "github": "https://github.com/henwijames/laravel-jobable",
+    "tech": ["Laravel", "Tailwind CSS", "MySQL"]
+  },
+  {
+    "image": "/works/todolist.png",
+    "category": "ReactJS",
+    "name": "Laravel + React Todo List",
+    "description": "Simple Laravel + ReactJS CRUD with User Authentication",
+    "link": "/",
+    "github": "https://github.com/henwijames/react-laravel-todolist",
+    "tech": ["ReactJS", "Laravel", "Tailwind CSS", "shadcnui", "MySQL"]
+  },
+  {
     "image": "/works/jingstyle.png",
     "category": "Wordpress",
     "name": "JingStyle Interiors",
@@ -38,28 +56,10 @@
   {
     "image": "/works/donpatata.png",
     "category": "PHP",
-    "name": "DON Patata Ordering System",
-    "description": "Ordering System for DON Patata to manage their orders and inventory",
+    "name": "Don Patata Ordering System",
+    "description": "Ordering System for Don Patata to manage their orders and inventory",
     "link": "/",
     "github": "/",
     "tech": ["PHP", "MySQL", "Bootstrap"]
-  },
-  {
-    "image": "/works/utopia.png",
-    "category": "HTML, CSS, AND JS",
-    "name": "Utopia Island Resort Booking System",
-    "description": "Booking System for Utopia Island Resort to manage their bookings and reservations",
-    "link": "/",
-    "github": "/",
-    "tech": ["HTML", "CSS", "JS"]
-  },
-  {
-    "image": "/works/lemsehi.png",
-    "category": "HTML, CSS, AND JS",
-    "name": "Lemery Senior High School Website",
-    "description": "Website for Lemery Senior High School to showcase their school and programs",
-    "link": "/",
-    "github": "/",
-    "tech": ["HTML", "CSS", "JS"]
   }
 ]
