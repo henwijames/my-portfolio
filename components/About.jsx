@@ -136,15 +136,19 @@ const skillData = [
     title: "tools",
     data: [
       {
+        name: "VS Code",
         imgPath: "/about/vscode.svg",
       },
       {
+        name: "Git",
         imgPath: "/about/git.svg",
       },
       {
+        name: "Figma",
         imgPath: "/about/figma.svg",
       },
       {
+        name: "Photoshop",
         imgPath: "/about/photoshop.svg",
       },
     ],
@@ -387,16 +391,25 @@ const About = () => {
                           return (
                             <div key={index}>
                               <div className="flex items-center gap-x-4">
-                                <div className="w-8 h-8">
-                                  <Image
-                                    src={imgPath}
-                                    alt="tool"
-                                    width={48}
-                                    height={48}
-                                    priority
-                                    className=" hover:scale-150 transition-all duration-300 cursor-pointer"
-                                  />
-                                </div>
+                                <TooltipProvider>
+                                  <Tooltip>
+                                    <TooltipTrigger asChild>
+                                      <div className="w-8 h-8">
+                                        <Image
+                                          src={imgPath}
+                                          alt="tool"
+                                          width={48}
+                                          height={48}
+                                          priority
+                                          className=" hover:scale-110 transition-all duration-300 cursor-pointer"
+                                        />
+                                      </div>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                      <p>{item.name}</p>
+                                    </TooltipContent>
+                                  </Tooltip>
+                                </TooltipProvider>
                               </div>
                             </div>
                           );
