@@ -11,13 +11,14 @@ const ProjectCard = ({ project }) => {
         {/* Image */}
         <div className="relative w-full h-[170px] flex items-center justify-center bg-black/5 dark:bg-secondary/40 overflow-hidden">
           <Image
-            className="absolute bottom-0 shadow-2x xl:w-[230px] w-[180px] cursor-pointer group-hover:scale-105 transition-all duration-200"
+            className="absolute bottom-0 w-auto h-auto shadow-2x cursor-pointer group-hover:scale-105 transition-all duration-200"
             src={project.image}
-            width={230}
-            height={245}
-            alt=""
+            width={190}
+            height={285}
+            alt="projects"
             priority
           />
+
           {/* buttons */}
           <div className="flex gap-x-4">
             {project.link && project.link !== "/" && (

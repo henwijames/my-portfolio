@@ -196,6 +196,7 @@ const About = () => {
             <Me
               containerStyles="w-[505px] h-[505px] relative"
               imgSrc="/hero/ako.png"
+              sizes={505}
             />
           </div>
           {/* Tabs */}
