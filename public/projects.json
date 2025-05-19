@@ -1,5 +1,14 @@
 [
   {
+    "image": "/works/lcojt.png",
+    "category": "ReactJS",
+    "name": "Lemery Colleges OJT Training Hours Tracking System",
+    "description": "On-the-Job Training Hours Tracking System for Lemery Colleges to manage their students' hours and attendance",
+    "link": "https://lemerycolleges-ojt-hours-tracker.laravel.cloud",
+    "github": "https://github.com/henwijames/ojt-hours-tracker",
+    "tech": ["ReactJS", "Laravel", "Shadcn UI", "InertiaJS", "MySQL"]
+  },
+  {
     "image": "/works/jobable.png",
     "category": "PHP",
     "name": "Jobable",

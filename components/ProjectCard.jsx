@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Card, CardHeader } from "./ui/card";
 import { Github, Link2Icon } from "lucide-react";
 import { Badge } from "./ui/badge";
+import truncate from "@/utils/string";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -47,8 +48,12 @@ const ProjectCard = ({ project }) => {
       </CardHeader>
       <div className="p-6 flex flex-col justify-between h-full">
         <div>
-          <h4 className="h4 mb-1 capitalize">{project.name}</h4>
-          <p className="text-muted-foreground text-sm">{project.description}</p>
+          <h4 className="text-[16px] font-medium mb-1 capitalize">
+            {project.name}
+          </h4>
+          <p className="text-muted-foreground text-sm">
+            {truncate(project.description, 50)}
+          </p>
         </div>
         {project.tech?.length > 0 && (
           <div className="flex gap-1 mt-4 flex-wrap w-full">
