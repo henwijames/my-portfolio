@@ -28,7 +28,7 @@ const Hero = ({ aboutRef }) => {
 
   useEffect(() => {
     const options = {
-      strings: ["Frontend Developer", "Wordpress Developer"],
+      strings: ["Frontend Developer", "Wordpress Developer", "PHP Developer"],
       typeSpeed: 100,
       backSpeed: 100,
       loop: true,
@@ -82,14 +82,13 @@ const Hero = ({ aboutRef }) => {
                 ref={textRef}
                 className="text-sm uppercase font-semibold text-primary tracking-[4px] hero flex flex-row xl:justify-start sm:flex justify-center items-center"
               >
-                <div className="hero-text">Front-end Developer</div>
+                <div className="hero-text"></div>
               </div>
               <h1 className="h1 mb-4">
                 Hi, I'm <span className="text-slate-500">Henry!</span>{" "}
               </h1>
               <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-                4th year IT student major in Web Development based in the
-                Philippines.
+              I build thoughtful, high-quality solutions that combine technical expertise with creative problem-solving. This portfolio showcases projects that reflect my skills, attention to detail, and commitment to excellence.
               </p>
               {/* Buttons */}
               <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">

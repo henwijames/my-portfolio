@@ -51,7 +51,7 @@ const qualificationData = [
       {
         college: "Lemery Colleges",
         qualifications: "Bachelor of Science in Information Technology",
-        years: "2021 - Present",
+        years: "2021 - June 26, 2025",
       },
       {
         college: "Lemery Senior High School",
@@ -228,12 +228,9 @@ const About = () => {
                       Creating beautiful and responsive website is my passion.
                     </h3>
                     <p className="subtitle max-w-xl mx-auto xl:mx-0">
-                      I'm into web development for almost 3 years now. I have a
-                      strong foundation in front-end development and UI/UX
-                      design. I am currently studying Bachelor of Science in
-                      Information Technology at Lemery Colleges. I am also a
-                      former front-end developer and UI/UX designer at Lemery
-                      Colleges.
+                      I'm into web development for almost 4 years now. I am a
+                      fresh graduate of Bachelor of Science in Information
+                      Technology at Lemery Colleges.
                     </p>
                     {/* Icons */}
                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
