@@ -34,12 +34,12 @@ const Contact = () => {
             {/* mail */}
             <div className="flex items-center gap-x-8">
               <MailIcon size={18} className="text-primary" />
-              <div>henryribano27@gmail.com</div>
+              <div>henryjamesribano27@gmail.com</div>
             </div>
             {/* home */}
             <div className="flex items-center gap-x-8">
               <HomeIcon size={18} className="text-primary" />
-              <div>Laguile, Taal, Batangas, Philippines.</div>
+              <div>Ajman, United Arab Emirates.</div>
             </div>
           </div>
           <Form />

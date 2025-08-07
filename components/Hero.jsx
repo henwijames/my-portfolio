@@ -60,7 +60,7 @@ const Hero = ({ aboutRef }) => {
   }, []);
 
   const handleDownCV = () => {
-    const resumePdfUrl = "/resume/Resume.pdf";
+    const resumePdfUrl = "/resume/Henry_James_Ribano.pdf";
     window.open(resumePdfUrl, "_blank");
   };
 
@@ -88,7 +88,10 @@ const Hero = ({ aboutRef }) => {
                 Hi, I'm <span className="text-slate-500">Henry!</span>{" "}
               </h1>
               <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              I build thoughtful, high-quality solutions that combine technical expertise with creative problem-solving. This portfolio showcases projects that reflect my skills, attention to detail, and commitment to excellence.
+                I build thoughtful, high-quality solutions that combine
+                technical expertise with creative problem-solving. This
+                portfolio showcases projects that reflect my skills, attention
+                to detail, and commitment to excellence.
               </p>
               {/* Buttons */}
               <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
@@ -113,23 +116,9 @@ const Hero = ({ aboutRef }) => {
             </div>
             {/* Image */}
             <div className="hidden xl:flex relative">
-              {/* Badge 1 */}
-              <Badge
-                containerStyles="absolute top-[5%] -left-[30rem] hover:scale-110 transition-all cursor-pointer"
-                icon={<RiBriefcase4Fill />}
-                endCountNum={4}
-                badgeText="Years of Experience"
-              />
-              {/* Badge 2 */}
-              <Badge
-                containerStyles="absolute top-[100%] -left-[10rem] hover:scale-110 transition-all cursor-pointer"
-                icon={<RiTodoFill />}
-                endCountNum={7}
-                badgeText="Projects Completed"
-              />
               <Me
-                imgSrc="/hero/hero.png"
-                containerStyles="w-[450px] h-[450px] absolute -top-24 -right-2"
+                imgSrc="/hero/me.jpg"
+                containerStyles="w-[450px] h-[450px] rounded-full "
                 sizes="(min-width: 1024px) 450px, 90vw"
               />
             </div>

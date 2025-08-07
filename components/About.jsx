@@ -28,7 +28,7 @@ const infoData = [
   },
   {
     icon: <MailIcon size={20} />,
-    text: "henryribano27@gmail.com",
+    text: "henryjamesribano27@gmail.com",
   },
   {
     icon: <Calendar size={20} />,
@@ -40,7 +40,7 @@ const infoData = [
   },
   {
     icon: <HomeIcon size={20} />,
-    text: "Taal, Batangas, Philippines",
+    text: "Ajman, United Arab Emirates",
   },
 ];
 
